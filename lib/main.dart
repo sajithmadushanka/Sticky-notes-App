@@ -1,8 +1,5 @@
 import 'dart:async';
-
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
-
 import 'package:flutter/material.dart';
 import 'package:stickynotes/button.dart';
 import 'package:stickynotes/goole_sheets_api.dart';
@@ -12,8 +9,13 @@ import 'package:stickynotes/note_grid.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   GoogleApi().init();
-  runApp(DevicePreview(
-      enabled: !kReleaseMode, builder: (context) => const MyApp()));
+  runApp( DevicePreview(
+      enabled: true,
+      tools: const [
+        ...DevicePreview.defaultTools,
+      ],
+      builder: (context) =>  const MyApp())
+);
 }
 
 class MyApp extends StatelessWidget {
@@ -22,8 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
+     
       theme: ThemeData(primarySwatch: Colors.pink),
       home: const MyHomePage(),
     );
