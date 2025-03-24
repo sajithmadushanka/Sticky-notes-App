@@ -1,3 +1,3 @@
 # stickynotes
 
-![Project Image](https://drive.google.com/file/d/1DGMMNI-LYx9HAKblF84HKEKxzZrM4pdJ/view?usp=sharing)
+![Project Image](https://github.com/sajithmadushanka/Sticky-notes-App/blob/main/Screenshot_8.png)
